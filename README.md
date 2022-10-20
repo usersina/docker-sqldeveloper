@@ -55,6 +55,8 @@ make test
 
 ## Roadmap
 
-- [ ] Optimize the image size before pushing to dockerhub
+- [ ] [Optimize the image size](https://hub.docker.com/r/adoptopenjdk/openjdk11)
 - [ ] Disable the collect data popup on initial start
 - [ ] [Deal with the JavaFX error on start](https://stackoverflow.com/questions/52484814/oracle-sql-developer-problem-initializing-welcome-page)
+
+<!-- Using adoptopenjdk/openjdk11:slim slightly reduces the image size by around 160 MB -->

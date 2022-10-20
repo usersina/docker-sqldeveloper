@@ -20,7 +20,7 @@ ADD assets /opt
 WORKDIR /opt
 
 # Install SQLDeveloper from the zip
-RUN unzip ./sqldeveloper-*.zip
+RUN unzip ./sqldeveloper-*.zip && rm -rf ./sqldeveloper-*.zip
 
 # Install SQLDeveloper
 RUN mkdir -p /data && chown -R $UID:$GID /data
