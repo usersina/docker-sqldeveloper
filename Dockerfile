@@ -30,7 +30,9 @@ VOLUME ["/data"]
 EXPOSE 5900
 
 # Run the configuration script
-RUN /opt/setup.sh "$EXEC_ARG" "$DISPLAY_ARG"
+COPY ./assets/setup.sh /entrypoint.sh
+RUN chmod +x /entrypoint.sh
+ENTRYPOINT ["/entrypoint.sh", "${EXEC_ARG}", ${DISPLAY_ARG}]
 
 # Setup the default run command
 CMD ["x11vnc", "-create", "-forever"]
