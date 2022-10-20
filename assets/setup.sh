@@ -6,7 +6,7 @@
 # echo $2 >> /opt/setup.sh.output
 
 Xvfb $2 -screen 0 1366x768x16 &
-RUN x11vnc -passwd TestVNC -display $2 -N -forever &
+x11vnc -passwd TestVNC -display $2 -N -forever &
 echo "exec $1" > ~/.xinitrc && chmod +x ~/.xinitrc
 
 # ================= Configure SQLDeveloper ================= #
