@@ -16,7 +16,7 @@ SCAN_IMAGE = false
 ## 
 ## Computed Vars: They are used internally, prefixed by "CV_" and should not be changed!
 CV_LOCAL_TAG = $(IMAGE_NAME):$(VERSION)# e.g. app-example-1:latest
-CV_REMOTE_TAG = $(CONTAINER_REGISTRY)/$(CV_LOCAL_TAG)# e.g. git.incedo.com:5050/ilg/app-example-1:latest
+CV_REMOTE_TAG = $(CONTAINER_REGISTRY)/$(CV_LOCAL_TAG)# e.g.  docker.io/usersina/app-example-1:latest
 CV_ZIP_EXISTS = $(shell test -f ./assets/sqldeveloper-*.zip && echo true)
 ## 
 ## ----------------------------------------- Imports -------------------------------------------
