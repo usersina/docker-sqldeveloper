@@ -10,23 +10,31 @@ connected to.
 
 ## Usage
 
-- The simplest way is by
+- Pulling the image
 
 ```bash
-# Pull the image
 docker pull usersina:sqldeveloper
-
-# Running the image
-docker run -d \
-    --port 5900:5900 \
-    --volume /tmp/mydata:/data \
-    --name sqldeveloper \
-    usersina/sqldeveloper
 ```
 
-- Better yet with OracleDB
+- Running the image
 
+Either directly with Docker
+
+```bash
+docker run -d \
+ --port 5900:5900 \
+ --volume /tmp/mydata:/data \
+ --name sqldeveloper \
+ usersina/sqldeveloper
+```
+
+Or better yet in a compose alongside an Oracle database.
 The reason I made this image in the first place is to have a playground for both OracleDB and SQLDeveloper, see the [oracle-sql-developer repository](https://github.com/usersina/oracle-sqldeveloper-docker) to have them both up and running.
+
+- Opening SQLDeveloper
+
+This is as simple as connecting from a VNC client to `localhost:5900`.
+I use [TigerVNC](https://tigervnc.org/) for Windows and [Remmina](https://remmina.org/) for Linux.
 
 ## Building the image manually
 
@@ -44,3 +52,7 @@ You can also run a container to test image with
 ```
 make test
 ```
+
+## Roadmap
+
+- [ ] Optimize the image size before pushing to dockerhub
