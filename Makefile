@@ -11,7 +11,7 @@
 ##
 CONTAINER_REGISTRY ?= docker.io/usersina
 IMAGE_NAME = sqldeveloper
-VERSION = local
+VERSION ?= local
 SCAN_IMAGE = false
 ## 
 ## Computed Vars: They are used internally, prefixed by "CV_" and should not be changed!
