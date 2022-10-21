@@ -4,7 +4,7 @@ This repository creates an image of SQLDeveloper accessible over VNC so you don'
 
 ## Motivation
 
-Although there exist this [great image](https://github.com/marcelhuberfoo/docker-sqldeveloper) already, I had a very
+Although there exists this [great image](https://github.com/marcelhuberfoo/docker-sqldeveloper) already, I had a very
 special problem where [X11 server always fails to get initialized on Linux](https://stackoverflow.com/questions/74112126/unable-to-init-xserver-inside-a-docker-container-on-popos), a VNC server on the other hand can be successfully
 connected to.
 
